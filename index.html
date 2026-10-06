@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sony WH-1000XM6 — Silence, Perfected | Flagship Wireless Noise Cancelling</title>
+    <meta name="description" content="Experience the new standard of silence. Sony WH-1000XM6 wireless noise cancelling headphones featuring custom acoustic drivers, QN2 neural processing, and 42-hour battery life." />
+    <meta name="theme-color" content="#060606" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="bg-[#060606] text-white selection:bg-[#0050ff]/30 selection:text-white">
+    <!-- Screen Loader -->
+    <div id="preloader" class="preloader">
+      <div class="preloader-content">
+        <div class="preloader-brand">
+          <span class="sony-wordmark">SONY</span>
+          <span class="preloader-model">WH-1000XM6</span>
+        </div>
+        <div class="preloader-bar-wrap">
+          <div id="preloader-bar" class="preloader-bar"></div>
+        </div>
+        <div class="preloader-status">
+          <span id="preloader-status-text">CALIBRATING ACOUSTIC ARCHITECTURE</span>
+          <span id="preloader-percent">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apple-Style Ultra-Minimal Fixed Top Navbar -->
+    <header id="navbar" class="navbar">
+      <div class="nav-container">
+        <!-- Left: Sony / Model -->
+        <a href="#hero" class="nav-brand" aria-label="Sony WH-1000XM6 Home">
+          <span class="brand-sony">SONY</span>
+          <span class="brand-separator">|</span>
+          <span class="brand-model">WH-1000XM6</span>
+        </a>
+
+        <!-- Center: Minimalist Navigation Links -->
+        <nav class="nav-links" aria-label="Main Navigation">
+          <a href="#experience" class="nav-link active" data-target="0">Overview</a>
+          <a href="#experience" class="nav-link" data-target="0.25">Technology</a>
+          <a href="#experience" class="nav-link" data-target="0.52">Noise Cancelling</a>
+          <a href="#experience" class="nav-link" data-target="0.75">Acoustics</a>
+          <a href="#specs-section" class="nav-link">Specs</a>
+          <a href="#anc-demo" class="nav-link">ANC Simulator</a>
+        </nav>
+
+        <!-- Right: Audio toggle + Primary Gradient CTA -->
+        <div class="nav-actions">
+          <button id="anc-simulator-btn" class="nav-sound-btn" title="Toggle Simulated Audio" aria-label="Toggle Sound Simulation">
+            <svg class="sound-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path class="sound-wave sound-wave-1" d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              <path class="sound-wave sound-wave-2" d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+            <span class="sound-btn-text">ANC Sim</span>
+          </button>
+          <a href="#preorder-section" id="nav-cta-btn" class="btn-gradient-nav">
+            <span>Experience WH-1000XM6</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Scrollytelling Section (Pinned 450vh Container) -->
+    <section id="experience" class="scrolly-section" aria-label="Interactive Product Scrollytelling Experience">
+      <!-- Sticky Full-Screen Canvas Container -->
+      <div id="sticky-viewport" class="sticky-viewport">
+        <!-- Background Ambient Radial Glow -->
+        <div class="void-ambient-glow"></div>
+        <div class="void-vignette-overlay"></div>
+
+        <!-- Central HTML5 Image Sequence Canvas -->
+        <canvas id="product-canvas" aria-label="Interactive 3D Exploded View Sequence of Sony WH-1000XM6"></canvas>
+
+        <!-- Dynamic Exploded Component Hotspots (Anchored in Exploded Phase) -->
+        <div id="hotspots-layer" class="hotspots-layer pointer-events-none">
+          <!-- Hotspot 1: Driver -->
+          <div class="hotspot-pin" id="pin-driver" style="top: 38%; left: 24%;" data-title="Carbon PEEK Transducer" data-desc="30mm bespoke diaphragm with edge-wound copper voice coil delivering flat 4Hz–40kHz response." data-tag="ACOUSTICS">
+            <div class="hotspot-pulse"></div>
+            <div class="hotspot-dot"></div>
+            <div class="hotspot-card">
+              <span class="hotspot-badge">DRIVER CORE</span>
+              <h4>30mm Carbon PEEK Diaphragm</h4>
+              <p>Ultra-rigid composite dome eliminates micro-distortion while reproducing high frequencies with zero resonance.</p>
+            </div>
+          </div>
+
+          <!-- Hotspot 2: Chipset / PCB -->
+          <div class="hotspot-pin" id="pin-chip" style="top: 64%; left: 50%;" data-title="QN2 Neural Audio Processor" data-desc="Dual-core DSP executing 70,000 real-time ambient attenuation calculations per second." data-tag="INTELLIGENCE">
+            <div class="hotspot-pulse"></div>
+            <div class="hotspot-dot"></div>
+            <div class="hotspot-card">
+              <span class="hotspot-badge">NEURAL DSP</span>
+              <h4>Dual-Core QN2 Processor</h4>
+              <p>Dedicated real-time machine learning engine analyzes atmospheric pressure, fit leakage, and ambient frequency spectrum.</p>
+            </div>
+          </div>
+
+          <!-- Hotspot 3: Microphones -->
+          <div class="hotspot-pin" id="pin-mic" style="top: 36%; left: 74%;" data-title="8-Microphone Array" data-desc="Quad beamforming capsules per side isolate speech and cancel inverse phase pressure waves." data-tag="ANC SENSORS">
+            <div class="hotspot-pulse"></div>
+            <div class="hotspot-dot"></div>
+            <div class="hotspot-card">
+              <span class="hotspot-badge">SENSOR ARRAY</span>
+              <h4>8-Microphone Beamforming</h4>
+              <p>Dual feedback and dual feedforward mics per earcup isolate voice from 45km/h wind and high-decibel turbofan roar.</p>
+            </div>
+          </div>
+
+          <!-- Hotspot 4: Power Cell -->
+          <div class="hotspot-pin" id="pin-battery" style="top: 52%; left: 51%;" data-title="Solid-State Li-Po Cell" data-desc="High energy density cell powering 42 hours continuous ANC playback with 3-minute USB-PD quick boost." data-tag="ENDURANCE">
+            <div class="hotspot-pulse"></div>
+            <div class="hotspot-dot"></div>
+            <div class="hotspot-card">
+              <span class="hotspot-badge">POWER SYSTEM</span>
+              <h4>42h High-Density Cell</h4>
+              <p>Optimized power management with USB-PD fast recharge: 3 minutes delivers up to 5 hours uninterrupted playback.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Storytelling Overlays (Synchronized to Scroll Progress) -->
+        <div class="story-overlays-container pointer-events-none">
+          <!-- Story Beat 1: Hero / Intro (0% - 15% scroll) -->
+          <article id="beat-hero" class="story-beat beat-hero pointer-events-auto">
+            <div class="beat-inner-center">
+              <div class="editorial-tag-pill">
+                <span class="tag-dot"></span>
+                <span>FLAGSHIP WIRELESS NOISE CANCELLING</span>
+              </div>
+              <h1 class="hero-headline">Sony WH-1000XM6</h1>
+              <p class="hero-subheadline">Silence, perfected.</p>
+              <p class="hero-supporting-copy">
+                Re-engineered for a world that never stops. Studio-grade acoustics meet our most powerful neural noise cancelling architecture ever conceived.
+              </p>
+              <div class="hero-actions">
+                <a href="#preorder-section" class="btn-gradient-hero">
+                  <span>Pre-order Now — $399</span>
+                </a>
+                <button id="hero-scroll-btn" class="btn-ghost-hero">
+                  <span>Explore Engineering</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+              <span class="indicator-text">SCROLL TO DISASSEMBLE</span>
+              <div class="mouse-pill">
+                <div class="mouse-wheel"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story Beat 2: Engineering Reveal (18% - 38% scroll) -->
+          <article id="beat-engineering" class="story-beat beat-engineering pointer-events-auto">
+            <div class="beat-inner-left">
+              <div class="beat-index">
+                <span class="index-num">01</span>
+                <span class="index-divider">/</span>
+                <span class="index-label">STRUCTURAL INTEGRITY</span>
+              </div>
+              <h2 class="editorial-heading">Precision-engineered for silence.</h2>
+              <div class="beat-body">
+                <p>
+                  Custom drivers, sealed acoustic chambers, and optimized airflow deliver studio-grade clarity.
+                </p>
+                <p>
+                  Every component is tuned for balance, power, and comfort—hour after hour. From the micro-perforated acoustic mesh to the floating hinge suspension, nothing is accidental.
+                </p>
+              </div>
+              <div class="spec-pills-row">
+                <div class="spec-pill">
+                  <span class="spec-pill-title">AeroFlow™ Chamber</span>
+                  <span class="spec-pill-val">Low-turbulence venting</span>
+                </div>
+                <div class="spec-pill">
+                  <span class="spec-pill-title">Carbon PEEK Dome</span>
+                  <span class="spec-pill-val">30mm rigid driver</span>
+                </div>
+                <div class="spec-pill">
+                  <span class="spec-pill-title">Hermetic Isolation</span>
+                  <span class="spec-pill-val">Zero pressure leakage</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story Beat 3: Noise Cancelling & Microphones (42% - 63% scroll) -->
+          <article id="beat-anc" class="story-beat beat-anc pointer-events-auto">
+            <div class="beat-inner-right">
+              <div class="beat-index">
+                <span class="index-num">02</span>
+                <span class="index-divider">/</span>
+                <span class="index-label">INTELLIGENT ATTENUATION</span>
+              </div>
+              <h2 class="editorial-heading">Adaptive noise cancelling, redefined.</h2>
+              <div class="beat-bullet-list">
+                <div class="bullet-item">
+                  <div class="bullet-icon-box">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="bullet-title">Multi-microphone array listens in every direction.</h3>
+                    <p class="bullet-desc">8 precision beamforming capsules isolate intrusive ambient noise from all angles with ultra-wide bandwidth capture.</p>
+                  </div>
+                </div>
+                <div class="bullet-item">
+                  <div class="bullet-icon-box">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="bullet-title">Real-time noise analysis adjusts to your environment.</h3>
+                    <p class="bullet-desc">Integrated V2 + QN2 co-processors recalculate inverse anti-noise waves 70,000 times per second with zero latency.</p>
+                  </div>
+                </div>
+                <div class="bullet-item">
+                  <div class="bullet-icon-box">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                      <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                      <line x1="12" y1="19" x2="12" y2="22"></line>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="bullet-title">Your music stays pure—planes, trains, and crowds fade away.</h3>
+                    <p class="bullet-desc">Atmospheric pressure sensing adapts automatically at 30,000 feet, preserving full dynamic range in flight.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story Beat 4: Sound & Upscaling (66% - 84% scroll) -->
+          <article id="beat-sound" class="story-beat beat-sound pointer-events-auto">
+            <div class="beat-inner-left">
+              <div class="beat-index">
+                <span class="index-num">03</span>
+                <span class="index-divider">/</span>
+                <span class="index-label">AUDIOPHILE PURITY</span>
+              </div>
+              <h2 class="editorial-heading">Immersive, lifelike sound.</h2>
+              <div class="beat-body">
+                <p>
+                  High-performance drivers unlock detail, depth, and texture in every track. Experience music with the spatial presence and tactile energy intended by the mixing engineer.
+                </p>
+                <p>
+                  AI-enhanced DSEE Extreme™ upscaling restores clarity to compressed audio files in real time, so every delicate vocal transient and cymbal decay feels vividly alive.
+                </p>
+              </div>
+              <div class="tech-metrics-grid">
+                <div class="metric-card">
+                  <span class="metric-num">990<small class="metric-unit">kbps</small></span>
+                  <span class="metric-name">LDAC™ Hi-Res Audio</span>
+                  <span class="metric-sub">3× data transmission over standard Bluetooth</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-num">360°<small class="metric-unit">Spatial</small></span>
+                  <span class="metric-name">Reality Audio Mapping</span>
+                  <span class="metric-sub">Binaural head tracking for spherical soundfield</span>
+                </div>
+                <div class="metric-card">
+                  <span class="metric-num">0.003%</span>
+                  <span class="metric-name">Total Harmonic Distortion</span>
+                  <span class="metric-sub">Laboratory-calibrated acoustic transparency</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story Beat 5: Reassembly & CTA (86% - 100% scroll) -->
+          <article id="beat-cta" class="story-beat beat-cta pointer-events-auto">
+            <div class="beat-inner-center">
+              <div class="editorial-tag-pill">
+                <span class="tag-dot active-dot"></span>
+                <span>REASSEMBLED PRECISION</span>
+              </div>
+              <h2 class="cta-headline">Hear everything. Feel nothing else.</h2>
+              <p class="cta-subheadline">
+                WH‑1000XM6. Designed for focus, crafted for comfort.
+              </p>
+              <p class="cta-microcopy">
+                Engineered for airports, offices, and everything in between.
+              </p>
+              <div class="cta-buttons-group">
+                <a href="#preorder-section" class="btn-gradient-main">
+                  <span>Experience WH-1000XM6</span>
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a href="#specs-section" class="btn-specs-secondary">
+                  <span>See Full Specs</span>
+                </a>
+              </div>
+              <div class="cta-guarantee-row">
+                <span>Free Express Shipping</span>
+                <span class="dot-separator">•</span>
+                <span>30-Day In-Home Trial</span>
+                <span class="dot-separator">•</span>
+                <span>2-Year Comprehensive Warranty</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Floating HUD Scrubber Bar (Interactive Apple / Awwwards Control) -->
+        <aside class="interactive-hud" aria-label="Interactive Sequence Scrubber Controls">
+          <div class="hud-content">
+            <div class="hud-phase-indicator">
+              <span class="hud-dot"></span>
+              <span id="hud-phase-label">PHASE 01: BEAUTY REVEAL</span>
+            </div>
+
+            <div class="hud-slider-track">
+              <input type="range" id="frame-range" min="0" max="1000" value="0" step="1" aria-label="Exploded View Scrubber" />
+              <div id="hud-slider-fill" class="hud-slider-fill" style="width: 0%;"></div>
+            </div>
+
+            <div class="hud-controls-row">
+              <div class="hud-nav-pills">
+                <button class="hud-pill-btn active" data-progress="0.0">Hero</button>
+                <button class="hud-pill-btn" data-progress="0.28">Engineering</button>
+                <button class="hud-pill-btn" data-progress="0.52">ANC Array</button>
+                <button class="hud-pill-btn" data-progress="0.75">Acoustics</button>
+                <button class="hud-pill-btn" data-progress="0.96">Reassemble</button>
+              </div>
+              <div class="hud-frame-counter">
+                <span id="hud-frame-current">FRAME 001</span>
+                <span class="counter-sep">/</span>
+                <span class="counter-total">240</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE ANC SIMULATOR & AUDIO VISUALIZER -->
+    <section id="anc-demo" class="anc-demo-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="editorial-tag-pill mx-auto">
+            <span class="tag-dot"></span>
+            <span>INTERACTIVE DEMO</span>
+          </div>
+          <h2 class="section-title">Experience the Silence</h2>
+          <p class="section-desc">
+            Toggle between raw environmental soundscapes and real-time active noise cancellation synthesized via the Web Audio engine.
+          </p>
+        </div>
+
+        <div class="anc-simulator-card">
+          <div class="simulator-top-bar">
+            <div class="sim-brand">
+              <span class="sim-led"></span>
+              <span>HD NOISE CANCELLING PROCESSOR QN2 — REALTIME MONITOR</span>
+            </div>
+            <div class="sim-readout">
+              <span id="anc-attenuation-db">-38.4 dB</span>
+              <small>ATTENUATION</small>
+            </div>
+          </div>
+
+          <!-- Live Audio Visualizer Canvas -->
+          <div class="visualizer-container">
+            <canvas id="anc-canvas-vis"></canvas>
+            <div class="vis-overlay-label">
+              <span id="vis-mode-label">ENVIRONMENTAL AMBIENT SPECTRUM</span>
+              <span id="vis-freq-range">20 Hz — 20,000 Hz</span>
+            </div>
+          </div>
+
+          <!-- Controls Bar -->
+          <div class="simulator-controls">
+            <!-- Environment selector -->
+            <div class="env-selector-group">
+              <span class="control-label">SELECT AMBIENT ENVIRONMENT:</span>
+              <div class="env-buttons">
+                <button class="btn-env active" data-env="cabin">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.2.4l-.4.4c-.4.4-.3 1 .2 1.3L8 12l-3 3-2.5-.5c-.3-.1-.6 0-.8.2l-.4.4c-.3.3-.2.8.2 1l2.5 1.5 1.5 2.5c.2.4.7.5 1 .2l.4-.4c.2-.2.3-.5.2-.8L7 16l3-3 3.7 4.6c.3.5.9.6 1.3.2l.4-.4c.3-.3.5-.7.4-1.2z"/></svg>
+                  <span>Jet Cabin</span>
+                </button>
+                <button class="btn-env" data-env="subway">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16"/><path d="M12 3v8"/><path d="M8 19l-2 3"/><path d="M16 19l2 3"/></svg>
+                  <span>Subway Metro</span>
+                </button>
+                <button class="btn-env" data-env="city">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M6 21V7l6-4v18"/><path d="M18 21V11l-6-4"/></svg>
+                  <span>City Concourse</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Master ANC Activation Switch -->
+            <div class="master-anc-switch">
+              <span class="control-label">ATTENUATION STATE:</span>
+              <button id="toggle-anc-master" class="btn-anc-toggle" aria-pressed="false">
+                <div class="toggle-track">
+                  <div class="toggle-thumb"></div>
+                </div>
+                <div class="toggle-info">
+                  <span id="anc-toggle-state" class="state-off">PASSIVE AMBIENT (ANC OFF)</span>
+                  <small id="anc-toggle-sub">Noise reaches the ear</small>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: ARCHITECTURAL DEEP-DIVE (BENTO GRID) -->
+    <section id="technology" class="tech-bento-section">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="editorial-tag-pill">
+            <span class="tag-dot"></span>
+            <span>ELECTRO-ACOUSTIC ENGINEERING</span>
+          </div>
+          <h2 class="section-title">Obsession in Every Nanometer</h2>
+          <p class="section-desc">
+            Decades of Sony studio heritage distilled into a lightweight, structural masterpiece of precision mechanical design.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Bento Card 1: QN2 Processor -->
+          <div class="bento-card bento-wide">
+            <div class="bento-card-bg card-glow-blue"></div>
+            <div class="bento-card-content">
+              <span class="bento-badge">SILICON MASTERY</span>
+              <h3 class="bento-title">Dual-Core QN2 Neural Processor</h3>
+              <p class="bento-p">
+                Engineered from the ground up for ultra-high resolution audio synthesis. 70,000 real-time ambient noise calculations per second adapt instantaneously as you transition from city traffic to airplane altitude.
+              </p>
+              <div class="bento-stats-row">
+                <div class="bento-stat">
+                  <span class="bento-stat-num">70k/s</span>
+                  <span class="bento-stat-label">Calculations</span>
+                </div>
+                <div class="bento-stat">
+                  <span class="bento-stat-num">0.2ms</span>
+                  <span class="bento-stat-label">Latency</span>
+                </div>
+                <div class="bento-stat">
+                  <span class="bento-stat-num">4nm</span>
+                  <span class="bento-stat-label">Process Node</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Card 2: Driver Transducer -->
+          <div class="bento-card">
+            <div class="bento-card-bg card-glow-cyan"></div>
+            <div class="bento-card-content">
+              <span class="bento-badge">30MM CARBON PEEK</span>
+              <h3 class="bento-title">High-Rigidity Diaphragm</h3>
+              <p class="bento-p">
+                A rigid carbon composite dome and high-compliance edge deliver deep sub-bass without inter-modulation distortion. High frequencies remain shimmering, organic, and fatigue-free.
+              </p>
+              <div class="frequency-indicator">
+                <span class="freq-tag">4 Hz</span>
+                <div class="freq-line"></div>
+                <span class="freq-tag">40 kHz</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Card 3: Ergonomics & Materials -->
+          <div class="bento-card">
+            <div class="bento-card-bg card-glow-purple"></div>
+            <div class="bento-card-content">
+              <span class="bento-badge">LUXURY WEARABILITY</span>
+              <h3 class="bento-title">Zero-Fatigue Fit</h3>
+              <p class="bento-p">
+                Crafted with soft-fit synthetic leather that relieves ear pressure while sealing out external acoustics. Stepless sliding headband with internal carbon-fiber reinforcement.
+              </p>
+              <div class="bento-weight-tag">
+                <span class="weight-bold">238 grams</span>
+                <span class="weight-sub">Featherweight balance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bento Card 4: Battery & Rapid Energy -->
+          <div class="bento-card bento-wide">
+            <div class="bento-card-bg card-glow-emerald"></div>
+            <div class="bento-card-content">
+              <span class="bento-badge">EXTENDED BATTERY SYSTEM</span>
+              <h3 class="bento-title">42-Hour Uninterrupted Endurance</h3>
+              <p class="bento-p">
+                Take a flight from London to Tokyo and back on a single charge. When time is critical, intelligent USB Power Delivery replenishes 5 hours of playback in only 3 minutes.
+              </p>
+              <div class="battery-visual-bar">
+                <div class="battery-fill" style="width: 100%;">
+                  <span>42 HOURS WITH ACTIVE NOISE CANCELLING</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FULL TECH SPECS MATRIX -->
+    <section id="specs-section" class="specs-section">
+      <div class="section-container">
+        <div class="section-header text-center">
+          <div class="editorial-tag-pill mx-auto">
+            <span class="tag-dot"></span>
+            <span>TECHNICAL SPECIFICATIONS</span>
+          </div>
+          <h2 class="section-title">Engineered to Perfection</h2>
+          <p class="section-desc">
+            Complete architectural breakdown of the Sony WH-1000XM6 flagship headphones.
+          </p>
+        </div>
+
+        <div class="specs-matrix">
+          <div class="specs-row">
+            <div class="spec-category">Audio & Acoustics</div>
+            <div class="spec-details">
+              <div class="spec-item">
+                <span class="spec-k">Transducer Unit</span>
+                <span class="spec-v">30mm Carbon Composite PEEK dome with Edge-Wound Neodymium Motor</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Frequency Response (Active)</span>
+                <span class="spec-v">4 Hz – 40,000 Hz (JEITA Standard Hi-Res Audio Certified)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Frequency Response (Bluetooth)</span>
+                <span class="spec-v">20 Hz – 40,000 Hz (LDAC 96kHz Sampling, 990 kbps)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Digital Sound Engine</span>
+                <span class="spec-v">DSEE Extreme™ Real-Time AI Audio Harmonic Upscaling</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Spatial Audio</span>
+                <span class="spec-v">360 Reality Audio with Dynamic Head Tracking</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="specs-row">
+            <div class="spec-category">Noise Cancellation & Processing</div>
+            <div class="spec-details">
+              <div class="spec-item">
+                <span class="spec-k">Dedicated Processors</span>
+                <span class="spec-v">Dual-Core HD Noise Cancelling Processor QN2 + Integrated Processor V2</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Microphone Topology</span>
+                <span class="spec-v">8 Microphones (4 Feedforward + 4 Feedback) with AI Wind Reduction</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Atmospheric Optimization</span>
+                <span class="spec-v">Barometric Pressure Sensor for High-Altitude Flight Equalization</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Personal NC Optimizer</span>
+                <span class="spec-v">Automatic Head Size, Hair & Eyeglass Leakage Compensation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="specs-row">
+            <div class="spec-category">Wireless & Connectivity</div>
+            <div class="spec-details">
+              <div class="spec-item">
+                <span class="spec-k">Bluetooth Version</span>
+                <span class="spec-v">Bluetooth® 5.4 (Class 1 Ultra-Low Power RF)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Supported Audio Codecs</span>
+                <span class="spec-v">LDAC™, LC3 (LE Audio), AAC, SBC, aptX™ Lossless</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Multipoint Connection</span>
+                <span class="spec-v">Seamless switching across 3 devices simultaneously</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Wired Input</span>
+                <span class="spec-v">Detachable 3.5mm Gold-Plated Stereo Cable (1.2m OFC copper)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="specs-row">
+            <div class="spec-category">Battery & Power</div>
+            <div class="spec-details">
+              <div class="spec-item">
+                <span class="spec-k">Battery Life (Continuous ANC)</span>
+                <span class="spec-v">Up to 42 hours (Continuous Playback)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Battery Life (ANC Off)</span>
+                <span class="spec-v">Up to 55 hours</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Quick Charge</span>
+                <span class="spec-v">3-minute charge = 5 hours playback (USB-PD Compatible)</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Charging Interface</span>
+                <span class="spec-v">USB Type-C® Fast Charge with Thermal Throttling Safety</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="specs-row">
+            <div class="spec-category">Physical & Ergonomics</div>
+            <div class="spec-details">
+              <div class="spec-item">
+                <span class="spec-k">Weight</span>
+                <span class="spec-v">238 g (8.4 oz) Ultralight Ergonomic Balance</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Ear Cushion Material</span>
+                <span class="spec-v">Soft-Fit Synthetic Protein Leather with Memory Foam Core</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-k">Finish Options</span>
+                <span class="spec-v">Matte Carbon Black, Platinum Silver, Midnight Obsidian</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: COLOR FINISHES & CONFIGURATION -->
+    <section id="finishes-section" class="finishes-section">
+      <div class="section-container text-center">
+        <div class="editorial-tag-pill mx-auto">
+          <span class="tag-dot"></span>
+          <span>CURATED FINISHES</span>
+        </div>
+        <h2 class="section-title">Sculpted in Matte Silence</h2>
+        <p class="section-desc">
+          Available in three fingerprint-resistant tactile matte finishes, precision-anodized with micro-bead blasted texture.
+        </p>
+
+        <div class="finish-selector-wrap">
+          <div class="finish-swatches">
+            <button class="finish-swatch active" data-finish="black" title="Matte Carbon Black">
+              <span class="swatch-color" style="background: #111113;"></span>
+              <span class="swatch-name">Matte Carbon Black</span>
+            </button>
+            <button class="finish-swatch" data-finish="silver" title="Platinum Silver">
+              <span class="swatch-color" style="background: #c8c9ce;"></span>
+              <span class="swatch-name">Platinum Silver</span>
+            </button>
+            <button class="finish-swatch" data-finish="navy" title="Midnight Obsidian">
+              <span class="swatch-color" style="background: #151b2c;"></span>
+              <span class="swatch-name">Midnight Obsidian</span>
+            </button>
+          </div>
+          <div id="finish-status-banner" class="finish-status-banner">
+            <span>SELECTED: <strong>Matte Carbon Black</strong> — Pure stealth aesthetic with copper logo accents.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: PRE-ORDER CHECKOUT SECTION -->
+    <section id="preorder-section" class="preorder-section">
+      <div class="section-container">
+        <div class="preorder-card">
+          <div class="preorder-card-glow"></div>
+          <div class="preorder-inner">
+            <div class="preorder-text">
+              <div class="editorial-tag-pill">
+                <span class="tag-dot active-dot"></span>
+                <span>LIMITED FIRST EDITION RESERVATION</span>
+              </div>
+              <h2 class="preorder-title">Pre-order Sony WH-1000XM6</h2>
+              <p class="preorder-subtitle">
+                Reserve your flagship headphones today. Includes complimentary bespoke magnetic hardshell travel case and 2 years of Sony Care Protection.
+              </p>
+              <div class="preorder-perks">
+                <div class="perk-item">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#00D6FF" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Ships Priority worldwide within 48 hours of release</span>
+                </div>
+                <div class="perk-item">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#00D6FF" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Custom laser engraving available at checkout</span>
+                </div>
+                <div class="perk-item">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#00D6FF" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>30-day money-back guarantee with complimentary returns</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="preorder-action-box">
+              <div class="price-display">
+                <span class="price-currency">$</span>
+                <span class="price-amount">399</span>
+                <span class="price-period">USD</span>
+              </div>
+              <div class="price-financing">or $33.25/mo for 12 mos with 0% APR</div>
+
+              <button id="preorder-submit-btn" class="btn-preorder-action">
+                <span>Reserve WH-1000XM6</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+
+              <div id="preorder-feedback" class="preorder-feedback hidden">
+                <div class="feedback-badge">RESERVATION CONFIRMED</div>
+                <p>Order #XM6-90481 reserved. Confirmation and tracking sent to your inbox.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: EDITORIAL SONY FOOTER -->
+    <footer class="sony-footer">
+      <div class="section-container">
+        <div class="footer-top-row">
+          <div class="footer-brand">
+            <span class="sony-logo-text">SONY</span>
+            <p class="footer-tagline">Creativity and Technology. Moving the World Forward.</p>
+          </div>
+          <div class="footer-links-cols">
+            <div class="footer-col">
+              <h4>Audio Lineup</h4>
+              <ul>
+                <li><a href="#experience">WH-1000XM6</a></li>
+                <li><a href="#experience">WF-1000XM5</a></li>
+                <li><a href="#experience">MDR-Z1R Signature</a></li>
+                <li><a href="#experience">LinkBuds S</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Technology</h4>
+              <ul>
+                <li><a href="#experience">QN2 Processor</a></li>
+                <li><a href="#experience">360 Reality Audio</a></li>
+                <li><a href="#experience">LDAC Hi-Res Audio</a></li>
+                <li><a href="#experience">Road to Zero 2050</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Support & Care</h4>
+              <ul>
+                <li><a href="#experience">Sony Care Protection</a></li>
+                <li><a href="#experience">Headphones Connect App</a></li>
+                <li><a href="#experience">Firmware Updates</a></li>
+                <li><a href="#experience">Global Warranty</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom-row">
+          <div class="footer-copy">
+            © 2026 Sony Electronics Inc. All rights reserved. “SONY”, “WH-1000XM6”, “LDAC”, and “DSEE Extreme” are registered trademarks of Sony Group Corporation.
+          </div>
+          <div class="footer-legal">
+            <a href="#experience">Privacy Policy</a>
+            <span>•</span>
+            <a href="#experience">Terms of Use</a>
+            <span>•</span>
+            <a href="#experience">Environmental Commitment</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive Pre-Order Modal -->
+    <div id="preorder-modal" class="preorder-modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-backdrop"></div>
+      <div class="modal-container">
+        <button id="modal-close-btn" class="modal-close" aria-label="Close dialog">×</button>
+        <div class="modal-header">
+          <span class="modal-kicker">OFFICIAL RESERVATION</span>
+          <h3 id="modal-title" class="modal-title">Confirm WH-1000XM6 Pre-Order</h3>
+        </div>
+        <div class="modal-body">
+          <div class="modal-summary-card">
+            <div class="summary-line">
+              <span>Model:</span>
+              <strong>Sony WH-1000XM6</strong>
+            </div>
+            <div class="summary-line">
+              <span>Selected Finish:</span>
+              <strong id="modal-finish-label">Matte Carbon Black</strong>
+            </div>
+            <div class="summary-line">
+              <span>Audio Processor:</span>
+              <span>Dual-Core QN2 Neural Engine</span>
+            </div>
+            <div class="summary-line">
+              <span>Delivery:</span>
+              <span class="text-emerald-400">Complimentary Express 48h</span>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-total">
+              <span>Total:</span>
+              <span class="total-price">$399.00 USD</span>
+            </div>
+          </div>
+
+          <form id="reservation-form" class="reservation-form">
+            <div class="input-group">
+              <label for="res-name">Full Name</label>
+              <input type="text" id="res-name" required placeholder="Alex Mercer" />
+            </div>
+            <div class="input-group">
+              <label for="res-email">Email Address</label>
+              <input type="email" id="res-email" required placeholder="alex@creativestudio.com" />
+            </div>
+            <div class="input-group">
+              <label for="res-engrave">Laser Engraving (Optional, max 16 chars)</label>
+              <input type="text" id="res-engrave" maxlength="16" placeholder="SILENCE 01" />
+            </div>
+            <button type="submit" class="btn-gradient-submit">
+              <span>Complete Reservation</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script Entry Point -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
